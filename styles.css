@@ -1,0 +1,148 @@
+/* Styles généraux */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    list-style-type: none;
+}
+
+
+/* Styles pour les catégories */
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.categories>* {
+    flex-basis: calc(100% / 6 - 20px);
+}
+
+
+/* Styles pour les questions et les réponses */
+
+.questions,
+.question,
+.faq-container {
+    margin-top: 20px;
+}
+
+.question,
+.faq-container {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.question h3,
+.question p,
+.faq-container h3,
+.faq-container p {
+    font-size: 18px;
+}
+
+.question p,
+.faq-container p {
+    font-size: 16px;
+}
+
+
+/* Media queries pour la mise en page responsive */
+
+@media (max-width: 768px) {
+    .categories {
+        justify-content: flex-start;
+    }
+    .category {
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    input[type="text"],
+    .category,
+    .question h3,
+    .question p,
+    .faq-container h3,
+    .faq-container p {
+        font-size: 14px;
+    }
+}
+
+
+/* Styles pour la barre de recherche */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.search-icon {
+    margin-right: 10px;
+    color: #888888;
+    cursor: pointer;
+}
+
+
+/* Styles adaptatifs */
+
+@media screen and (max-width: 768px) {
+    .search-container {
+        margin-bottom: 10px;
+    }
+    .search-input {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .search-icon {
+        margin-right: 5px;
+    }
+}
